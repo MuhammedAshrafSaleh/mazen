@@ -123,6 +123,12 @@ ul {
   content: "\f108";
   font-family: 'VideoJS'; }
 
+.plyr__menu {
+  opacity: 0; }
+
+.plyr__volume {
+  opacity: 0; }
+
 .main__heading {
   color: var(--white);
   font-size: 10rem;
@@ -711,7 +717,7 @@ Main Navbar
   color: white;
   font-weight: bold;
   position: relative;
-  width: 30rem;
+  width: 33rem;
   top: 100px; }
 
 .🤚 {
@@ -1144,7 +1150,11 @@ Main Navbar
           margin-right: 5px; } }
     @media (max-width: 37.5rem) {
       .hero__heading {
-        font-size: 3.5rem; } }
+        font-size: 3rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px; }
+        .hero__heading span {
+          margin-right: 5px; } }
   .hero .main__text {
     margin: 4rem 0;
     margin-bottom: 6rem; }

@@ -150,6 +150,10 @@ ul {
   content: "\f108";
   font-family: 'VideoJS';
 }
-// .plyr__controls {
-//   display: none;
-// }
+
+.plyr__menu {
+  opacity: 0;
+}
+.plyr__volume {
+  opacity: 0;
+}

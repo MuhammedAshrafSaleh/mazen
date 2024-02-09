@@ -60,7 +60,12 @@
             }
           }
           @include responsive(phone) {
-            font-size: 3.5rem;
+            font-size: 3rem;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            span {
+                margin-right: 5px;
+            }
           }
     }
 
