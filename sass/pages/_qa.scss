@@ -1,0 +1,37 @@
+.faq {
+    width: 100%;
+    padding: 10rem 0;
+    &__container {
+        margin: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 10rem 0;
+
+        .tab {
+            background: var(--secondary);
+            width: 100%;
+            .tab__number {
+                background: linear-gradient(135deg, var(--primary), #49c628);
+            }
+            .main__text {
+                padding-bottom: 2rem;
+                color: var(--white);
+            }
+            .tab__head { 
+                color: var(--white);
+            }
+            input:checked ~ label .tab__head {
+              color: var(--secondary);
+            }
+            @include responsive(tab) {
+                .tab__head {
+                    font-size: 2rem;
+                }
+               
+            }
+        }
+    }
+}

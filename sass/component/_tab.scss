@@ -1,0 +1,104 @@
+.tab {
+    background: var(--secondary);
+    position: relative;
+    padding: 0 2rem;
+    box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,0.25);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    @include responsive(tab) {
+        width: 100%;
+    }
+    input {
+        appearance: none;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &::after {
+            content: '+';
+            position: absolute;
+            left: 2rem;
+            font-size: 5em;
+            color: rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s;
+        }
+    }
+
+    &:hover label::after {
+        color: var(--white);
+    }
+
+    input:checked ~ label::after {
+        transform: rotate(135deg);
+    } 
+
+    &__number {
+        width: 4rem;
+        height: 4rem;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 2.5rem;
+        border-radius: 5px;
+        margin-left: 1rem;
+    }
+    &__head {
+        position: relative;
+        font-weight: 500;
+        color: var(--white);
+        z-index: 10;
+        font-size: 4rem;
+        @include responsive(phone) {
+            font-size: 2.5rem;
+        }
+    }
+    &__content {
+        max-height: 0;
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    input:checked ~ .tab__content {
+        max-height: 100vh;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        padding: 1rem;
+        font-size: 2rem;
+        z-index: 10;
+        position: relative;
+        color: var(--white);
+    }
+    input:checked ~ label .tab__number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 15rem;
+        justify-content: flex-end;
+        padding: 2rem;
+        font-weight: bold;
+    }
+
+    input:checked ~ label .tab__head {
+        background: var(--white);
+        color: #ccc;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 5px 15pxrgba(0,0,0,0.25);
+    }
+}

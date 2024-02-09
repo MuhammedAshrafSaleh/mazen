@@ -1,0 +1,155 @@
+:root {
+  --primary: #feeb60;
+  --secondary: #374262;
+  --blue-white: #fcfcfc;
+  --white: #FFFFFF;
+  --orange: #F58220;
+  --red: #ED1C24;
+  --blue: #0C134F;
+  --gray: #A78295;
+  --black-gray: #333;
+}
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'Tajawal', sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:focus, a:link {
+  text-decoration: none !important;
+  outline: none;
+}
+custom__btn:focus,
+custom__btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
+  
+}
+body {
+  margin: 0;
+  width: 100%;
+  font-style: normal;
+  line-height: 1.4;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #070506;
+}
+p,h1,h2,h3,h4,h5,h6,span,a {
+    font-family: 'Tajawal', sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  @include responsive(bigDesktop) {
+    font-size: 75%;
+  }
+
+  @include responsive(tabLand) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(tab) {
+    font-size: 50%;
+  }
+
+  @include responsive(phone) {
+    font-size: 50%;
+  }
+
+  @include responsive(smallphone) {
+    font-size: 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: rgba(225, 225, 225, 0.1);
+  width: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary),
+    var(--primary)
+  );
+}
+
+a:focus,
+a:link {
+  text-decoration: none !important;
+  outline: none;
+}
+
+ul {
+  list-style: none !important;
+}
+.custom__container {
+  width: 90%;
+  margin: 0 auto;
+  // background-color: #98EECC;
+}
+
+.row {
+  display: flex;
+}
+.row-c {
+  display: flex;
+  flex-direction: column;
+}
+@font-face {
+  font-family: 'VideoJS';
+  src: url('https://vjs.zencdn.net/f/1/vjs.eot');
+  src: url('https://vjs.zencdn.net/f/1/vjs.eot?#iefix') format('embedded-opentype'), 
+    url('https://vjs.zencdn.net/f/1/vjs.woff') format('woff'),     
+    url('https://vjs.zencdn.net/f/1/vjs.ttf') format('truetype');
+}
+
+.video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before, .vjs-icon-pause:before {
+  content: "\f103";
+  font-family: 'VideoJS';
+}
+
+.video-js .vjs-mute-control .vjs-icon-placeholder:before, .vjs-icon-volume-high:before {
+  content: "\f107";
+  font-family: 'VideoJS';
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .vjs-icon-play:before {
+  content: "\f101";
+  font-family: 'VideoJS';
+}
+
+.video-js .vjs-picture-in-picture-control .vjs-icon-placeholder:before, .vjs-icon-picture-in-picture-enter:before {
+  content: "\f121";
+  font-family: 'VideoJS';
+}
+
+
+
+.video-js .vjs-fullscreen-control .vjs-icon-placeholder:before, .vjs-icon-fullscreen-enter:before {
+  content: "\f108";
+  font-family: 'VideoJS';
+}
+// .plyr__controls {
+//   display: none;
+// }

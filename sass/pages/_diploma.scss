@@ -1,0 +1,78 @@
+.diploma {
+    width: 100%;
+    padding-top: 10rem;
+
+    .main__heading {
+        text-align: center;
+    }
+
+    &__body {
+        padding-top: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(tab) { 
+            flex-direction: column !important;
+        }
+    }
+    &__content {
+        width: 47%;
+        @include responsive(tab) { 
+            width: 90%;
+
+        }
+    }
+    &__image {
+        width: 47%;
+        img {
+            max-width: 100%;
+        }
+        @include responsive(tab) { 
+            width: 90%;
+        }
+    }
+
+    .secondary__head {
+        font-size: 5rem;
+        text-align: start;
+
+        @include responsive(phone) {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    &__item {
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: #ccc;
+        font-weight: 700;
+    }
+    .head__number {
+        width: 8rem;
+        height: 8rem;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 3.5rem;
+        border-radius: 5px;
+        margin-left: 1rem;
+    }
+    .head__number:nth-of-type(1){
+        background: linear-gradient(135deg, var(--primary), #49c628);
+    }
+    .head__number.blue {
+        background: linear-gradient(135deg, #40C9FF, #E81CFF);
+    }
+}
+
+
+// @media (max-width:730px) {  margin-bottom: 5rem;}

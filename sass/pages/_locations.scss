@@ -1,0 +1,39 @@
+
+.locations {
+    width: 100%;
+    padding: 5rem 0;
+    &__container {
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        .locations__item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            p {
+                color: white;
+                font-size: 3rem;
+                margin: 2rem 0;
+            }
+            @include responsive(phone) {
+               width: 45%;
+            }
+        }
+        img {
+            width: 10rem;
+        }
+        @include responsive(phone) {
+            flex-direction: column;
+        }
+    }
+    .map {
+        height: 500px;
+        width: 100%;
+        position: relative;
+    }
+}
+

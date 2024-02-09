@@ -1,0 +1,74 @@
+.hero {
+    width: 100%;
+    padding: 10rem 0;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        @include responsive(tab) { 
+           flex-direction: column-reverse;
+           margin-top: 6rem;
+        }
+    }
+
+    &__video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48%;
+        @include responsive(tab) { 
+            width: 100%;
+        }
+        video {
+            width: 80%;
+        }
+        .plyr__controls {
+            display: none;
+        }
+        .plyr__video-wrapper {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__content {
+        width: 48%;
+        @include responsive(tab) { 
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            z-index:999;
+        }
+       @media screen and (max-width: 600px) { 
+            margin-top: 2rem;
+        }
+    }
+    &__heading {
+        color: var(--white);
+        font-size: 6rem;
+        color: var(--white);
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        font-weight: bold;
+        @include responsive(tab) {
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            span {
+                margin: 0 1rem;
+            }
+          }
+          @include responsive(phone) {
+            font-size: 3.5rem;
+          }
+    }
+
+    .main__text {
+        margin: 4rem 0;
+        margin-bottom: 6rem;
+        @include responsive(tab) {
+            text-align: center;
+        }
+    }
+}

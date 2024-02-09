@@ -1,0 +1,53 @@
+.mazen {
+    width: 100%;
+    position: relative;
+    padding: 10rem 0;
+    .main__heading {
+        text-align: right;
+        @media screen and (max-width: 1550px) {
+            font-size: 7rem;
+        }
+        @include responsive(tab) {
+            text-align: center;
+            font-size: 7rem;
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        @include responsive(tab) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        width: 45%;
+        @include responsive(tab) {
+            width: 95%;
+            text-align: center;
+        }
+        .main__text {
+            margin: 2rem 0;
+        }
+    }
+
+    &__img {
+        width: 45%;
+        @include responsive(tab) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .main__text {
+        @include responsive(tab) {
+            text-align: center;
+        }
+    }
+}

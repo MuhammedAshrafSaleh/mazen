@@ -1,0 +1,48 @@
+.program {
+    width: 100%;
+    padding: 5rem 0;
+
+    &__container {
+        padding: 5rem 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .card {
+            .card__head {
+                font-size: 2rem;
+            }
+            @media screen and (max-width: 1100px) {
+                .card__head {
+                    font-size: 1.5rem;
+                }
+            }
+            width: 20%;
+            margin-bottom: 3rem;
+            @include responsive(tab) {
+                width: 40%;
+                .card__head {
+                    font-size: 2rem;
+                }
+            }
+        }
+        @include responsive(tab) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        @include responsive(phone) {
+            flex-direction: column;
+            .card {
+                width: 80%;
+            }
+        }
+    }
+}
+
+.blue {
+    background: linear-gradient(135deg, #40C9FF, #E81CFF);
+}
+.yellow {
+    background: linear-gradient(135deg, var(--primary), #49c628);
+}

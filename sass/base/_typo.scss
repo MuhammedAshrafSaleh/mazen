@@ -1,0 +1,46 @@
+.main__heading {
+  color: var(--white);
+  font-size: 10rem;
+  color: var(--primary);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  text-align: center;
+  font-weight: bold;
+  @include responsive(tab) { 
+    font-size: 6rem;
+  }
+  @include responsive(phone) { 
+    font-size: 5rem;
+    font-weight: 500;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+  }
+}
+.secondary__head {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.head__text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-align: center;
+}
+
+.main__text {
+  font-size: 2rem;
+  color: var(--gray);
+  font-weight: 600;
+  opacity: 0.8;
+  line-height: 150%;
+}
+
+.secondary__text {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}

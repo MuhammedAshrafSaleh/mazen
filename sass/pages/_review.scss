@@ -1,0 +1,13 @@
+.hero__body.review {
+    @include responsive(tab) {
+        flex-direction: column;
+    }
+    .plyr__controls {
+        display: none;
+    }
+    .plyr__video-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}   

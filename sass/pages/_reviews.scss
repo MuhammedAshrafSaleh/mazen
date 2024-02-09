@@ -1,0 +1,31 @@
+.reviews {
+    padding: 10rem 0;
+
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+  
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 50rem;
+        height: 50rem;
+        box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: 1.0);
+        filter: blur(4px);
+      }
+
+      .swiper-slide-active {
+        filter: blur(0px);
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+      .swiper-3d .swiper-slide-shadow-left ,
+      .swiper-3d .swiper-slide-shadow-right {
+        background-image: none;
+    }
+}

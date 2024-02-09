@@ -1,0 +1,17 @@
+.diploma__details {
+    width: 100%;
+    padding: 10rem 0;
+
+    &--container {
+        margin: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 10rem 0;
+    }
+    .tab label .tab__number {
+        background: linear-gradient(135deg, var(--primary), #49c628);
+    }
+}
