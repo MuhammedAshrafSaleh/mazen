@@ -4,6 +4,12 @@
 
     .main__heading {
         text-align: center;
+
+        @include responsive(phone) {
+            font-size: 8rem;
+        }
+       
+        
     }
 
     &__body {
@@ -14,12 +20,19 @@
         @include responsive(tab) { 
             flex-direction: column !important;
         }
+        @include responsive(phone) { 
+            padding-top: 5rem;
+        }
+
     }
     &__content {
         width: 47%;
         @include responsive(tab) { 
             width: 90%;
 
+        }
+        @include responsive(phone) { 
+            width: 100%;
         }
     }
     &__image {
@@ -29,6 +42,9 @@
         }
         @include responsive(tab) { 
             width: 90%;
+        }
+        @include responsive(phone) { 
+            width: 100%;
         }
     }
 

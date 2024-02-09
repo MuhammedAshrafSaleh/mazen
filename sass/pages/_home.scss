@@ -56,7 +56,7 @@
             justify-content: center;
             font-size: 4rem;
             span {
-                margin: 0 1rem;
+                margin-right: 5px;
             }
           }
           @include responsive(phone) {

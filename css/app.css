@@ -262,7 +262,7 @@ Main Navbar
   width: 100%;
   background-color: var(--secondary);
   opacity: 0.95;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   z-index: 11111111;
   top: 0;
@@ -1141,7 +1141,7 @@ Main Navbar
         justify-content: center;
         font-size: 4rem; }
         .hero__heading span {
-          margin: 0 1rem; } }
+          margin-right: 5px; } }
     @media (max-width: 37.5rem) {
       .hero__heading {
         font-size: 3.5rem; } }
@@ -1157,6 +1157,9 @@ Main Navbar
   padding-top: 10rem; }
   .diploma .main__heading {
     text-align: center; }
+    @media (max-width: 37.5rem) {
+      .diploma .main__heading {
+        font-size: 8rem; } }
   .diploma__body {
     padding-top: 10rem;
     display: flex;
@@ -1165,11 +1168,17 @@ Main Navbar
     @media (max-width: 56.25rem) {
       .diploma__body {
         flex-direction: column !important; } }
+    @media (max-width: 37.5rem) {
+      .diploma__body {
+        padding-top: 5rem; } }
   .diploma__content {
     width: 47%; }
     @media (max-width: 56.25rem) {
       .diploma__content {
         width: 90%; } }
+    @media (max-width: 37.5rem) {
+      .diploma__content {
+        width: 100%; } }
   .diploma__image {
     width: 47%; }
     .diploma__image img {
@@ -1177,6 +1186,9 @@ Main Navbar
     @media (max-width: 56.25rem) {
       .diploma__image {
         width: 90%; } }
+    @media (max-width: 37.5rem) {
+      .diploma__image {
+        width: 100%; } }
   .diploma .secondary__head {
     font-size: 5rem;
     text-align: start; }
@@ -1310,6 +1322,9 @@ Main Navbar
     line-height: 150%;
     padding: 1rem 0;
     text-align: center; }
+  @media (max-width: 37.5rem) {
+    .subscribe .main__heading {
+      font-size: 4.5rem; } }
   .subscribe .main__text {
     color: #fff; }
   .subscribe__container {
@@ -1367,8 +1382,13 @@ Main Navbar
         color: var(--white); }
       .faq__container .tab .tab__head {
         color: var(--white); }
+        @media (max-width: 37.5rem) {
+          .faq__container .tab .tab__head {
+            font-size: 1.8rem;
+            width: 90%; } }
       .faq__container .tab input:checked ~ label .tab__head {
-        color: var(--secondary); }
+        color: var(--secondary);
+        width: 100%; }
       @media (max-width: 56.25rem) {
         .faq__container .tab .tab__head {
           font-size: 2rem; } }

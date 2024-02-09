@@ -11,6 +11,11 @@
         padding: 1rem 0;
         text-align: center;
     }
+    .main__heading {
+        @include responsive(phone){
+            font-size: 4.5rem;
+        }
+    }
 
     .main__text {
         color: #fff;
