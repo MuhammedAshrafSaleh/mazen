@@ -75,27 +75,89 @@ window.addEventListener('load', function () {
 
 /////////////////////////
 
-document.addEventListener('DOMContentLoaded', () => { 
-  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-  const player1 = new Plyr('#player1');
-  window.player1 = player1;
-  const player2 = new Plyr('#player2');
-  window.player2 = player2;
-  const player3 = new Plyr('#player3');
-  window.player3 = player3;
+// document.addEventListener('DOMContentLoaded', () => { 
+//   // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+//   const player1 = new Plyr('#player1');
+//   window.player1 = player1;
+//   const player2 = new Plyr('#player2');
+//   window.player2 = player2;
+//   const player3 = new Plyr('#player3');
+//   window.player3 = player3;
+// });
+
+// var playerBtn1 = document.querySelector('.video1');
+// var playerBtn2 = document.querySelector('.video2');
+// var playerBtn3 = document.querySelector('.video3');
+// playerBtn1.addEventListener('click', function(){
+//   document.querySelector('.video1 .plyr__controls').style.display = 'block';
+// });
+// playerBtn2.addEventListener('click', function(){
+//   document.querySelector('.video2 .plyr__controls').style.display = 'block';
+// });
+
+// playerBtn3.addEventListener('click', function(){
+//   document.querySelector('.video3 .plyr__controls').style.display = 'block';
+// });
+
+/////////////////////////////////////////
+document.getElementById("thumbnail").addEventListener("click", function() {
+  var thumbnail = document.getElementById("thumbnail");
+  var video = document.getElementById("home__video");
+  var playButton = document.querySelector(".playButton");
+  
+  thumbnail.style.opacity = "0";
+  playButton.style.opacity = "0";
+  
+  setTimeout(function() {
+      thumbnail.style.display = "none";
+      playButton.style.display = "none";
+      video.style.display = "block";
+      video.style.opacity = "1";
+      
+      // Play the video
+      var iframe = video.querySelector("iframe");
+      iframe.src += "&autoplay=1";
+  }, 500); // Adjust the delay as needed
 });
 
-var playerBtn1 = document.querySelector('.video1');
-var playerBtn2 = document.querySelector('.video2');
-var playerBtn3 = document.querySelector('.video3');
-playerBtn1.addEventListener('click', function(){
-  document.querySelector('.video1 .plyr__controls').style.display = 'block';
-});
-playerBtn2.addEventListener('click', function(){
-  document.querySelector('.video2 .plyr__controls').style.display = 'block';
+document.querySelector(".lecture .thumbnail").addEventListener("click", function() {
+  var thumbnail = document.querySelector(".lecture .thumbnail");
+  var video = document.querySelector(".lecture .lecture__video");
+  var playButton = document.querySelector(".lecture .playButton");
+  
+  thumbnail.style.opacity = "0";
+  playButton.style.opacity = "0";
+  
+  setTimeout(function() {
+      thumbnail.style.display = "none";
+      playButton.style.display = "none";
+      video.style.display = "block";
+      video.style.opacity = "1";
+      
+      // Play the video
+      var iframe = video.querySelector(".lecture iframe");
+      iframe.src += "&autoplay=1";
+  }, 500); // Adjust the delay as needed
 });
 
-playerBtn3.addEventListener('click', function(){
-  document.querySelector('.video3 .plyr__controls').style.display = 'block';
+document.querySelector(".review .thumbnail").addEventListener("click", function() {
+  var thumbnail = document.querySelector(".review .thumbnail");
+  var video = document.querySelector(".review .review__video");
+  var playButton = document.querySelector(".review .playButton");
+  
+  thumbnail.style.opacity = "0";
+  playButton.style.opacity = "0";
+  
+  setTimeout(function() {
+      thumbnail.style.display = "none";
+      playButton.style.display = "none";
+      video.style.display = "block";
+      video.style.opacity = "1";
+      
+      // Play the video
+      var iframe = video.querySelector(".review  iframe");
+      iframe.src += "&autoplay=1";
+  }, 500); // Adjust the delay as needed
 });
+
 

@@ -11,27 +11,6 @@
            margin-top: 6rem;
         }
     }
-
-    &__video {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48%;
-        @include responsive(tab) { 
-            width: 100%;
-        }
-        video {
-            width: 80%;
-        }
-        .plyr__controls {
-            display: none;
-        }
-        .plyr__video-wrapper {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-    }
     &__content {
         width: 48%;
         @include responsive(tab) { 
@@ -46,11 +25,12 @@
     }
     &__heading {
         color: var(--white);
-        font-size: 6rem;
+        font-size: 4rem;
         color: var(--white);
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 2px;
         font-weight: bold;
+        span {
+            color: var(--primary);
+        }
         @include responsive(tab) {
             display: flex;
             justify-content: center;
@@ -61,8 +41,6 @@
           }
           @include responsive(phone) {
             font-size: 3rem;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke-width: 1px;
             span {
                 margin-right: 5px;
             }
@@ -70,10 +48,49 @@
     }
 
     .main__text {
-        margin: 4rem 0;
         margin-bottom: 6rem;
+        margin-top: 2rem;
         @include responsive(tab) {
             text-align: center;
+        }
+    }
+////////////////////////////////////
+    .thumbnail {
+        position: relative;
+        z-index: 1;
+        transition: opacity 0.5s;
+        img {
+            max-width: 100%;
+            transition: opacity 0.5s;
+        }
+    }
+    
+    .playButton{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        z-index: 11;
+        transition: opacity 0.5s;
+    }
+    .video {
+        display: none;
+        transition: opacity 0.5s;
+    }
+    &__video {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48%;
+        @include responsive(tab) { 
+            width: 100%;
+            iframe {
+                width: 100%;
+            }
         }
     }
 }

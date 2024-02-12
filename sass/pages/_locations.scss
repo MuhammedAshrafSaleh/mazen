@@ -9,18 +9,24 @@
         align-items: center;
         justify-content: space-evenly;
         flex-direction: row;
-        .locations__item{
+        .locations__item {
+            width: 20%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            p {
+            margin: 2rem 0;
+            .main__text {
+                font-weight: bold;
                 color: white;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 margin: 2rem 0;
             }
+            p {
+                text-align: center;
+            }
             @include responsive(phone) {
-               width: 45%;
+               width: 70%;
             }
         }
         img {

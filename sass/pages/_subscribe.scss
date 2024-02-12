@@ -44,16 +44,20 @@
             @include responsive(phone) {
                 width: 100%;
             }
+        }
+    }
 
-            .content {
-                width: 80%;
-                @include responsive(tab) {
-                    width: 90%;
-                }
-                .main__text {
-                    padding-bottom: 2rem;
-                }
-            }
+    &__content {
+        width: 45%;
+        background-color: var(--secondary);
+        padding: 2rem 4rem;
+        text-align: center;
+        p {
+            text-align: center;
+        }
+        @include responsive(tab) {
+            width: 100%;
+            margin-bottom: 5rem;
         }
     }
 

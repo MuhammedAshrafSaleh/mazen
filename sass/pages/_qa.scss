@@ -12,20 +12,20 @@
 
         .tab {
             background: var(--secondary);
-            width: 100%;
+            width: 80%;
             .tab__number {
-                background: linear-gradient(135deg, var(--primary), #49c628);
+                background: var(--primary);
             }
             .main__text {
                 padding-bottom: 2rem;
                 color: var(--white);
             }
             .tab__head { 
-               
-                color: var(--white);
-               @include responsive(phone) {
+                color: var(--white);    
+                font-size: 2.5rem;
+                @include responsive(phone) {
                 font-size: 1.8rem;
-                width: 90%;
+                    width: 90%;
                }
             }
             input:checked ~ label .tab__head {
@@ -36,7 +36,7 @@
                 .tab__head {
                     font-size: 2rem;
                 }
-               
+                width: 100%;
             }
         }
     }
