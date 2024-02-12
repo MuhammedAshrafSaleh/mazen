@@ -1,13 +1,64 @@
 .hero__body.review {
+    display: flex;
+    justify-content: space-evenly;
     @include responsive(tab) {
         flex-direction: column;
     }
-    .plyr__controls {
-        display: none;
-    }
-    .plyr__video-wrapper {
-        align-items: center;
+}
+
+.review {
+    &__container {
+        width: 40%;
+        margin: 3rem 0;
+        position: relative;
         display: flex;
+        align-items: center;
         justify-content: center;
+
+        @include responsive(tab) {
+            width: 80%;
+        }
+        .review__video {
+            width: 100%;
+            iframe {
+                width: 100%;
+            }
+            @include responsive(tab) {
+                width: 90%;
+    
+                iframe {
+                    width: 100%;
+                }
+            }
+        }
+
+        .thumbnail {
+            position: relative;
+            z-index: 1;
+            transition: opacity 0.5s;
+
+            img {
+                max-width: 100%;
+                transition: opacity 0.5s;
+            }
+        }
+
+        .playButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 11;
+            transition: opacity 0.5s;
+        }
+
+        .video {
+            display: none;
+            // transition: opacity 0.5s;
+        }
+
     }
-}   
+}

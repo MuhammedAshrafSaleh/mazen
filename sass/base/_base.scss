@@ -1,12 +1,12 @@
 :root {
-  --primary: #feeb60;
-  --secondary: #374262;
+  --primary: #EEDF5E;
+  --secondary: #333BFF;
+  --gray: #939597;
   --blue-white: #fcfcfc;
   --white: #FFFFFF;
   --orange: #F58220;
   --red: #ED1C24;
   --blue: #0C134F;
-  --gray: #A78295;
   --black-gray: #333;
 }
 
@@ -82,16 +82,12 @@ html {
 
 ::-webkit-scrollbar {
   background-color: rgba(225, 225, 225, 0.1);
-  width: 2rem;
+  width: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--secondary),
-    var(--primary)
-  );
+  border-radius: 20px;
+  background-color: var(--secondary);
 }
 
 a:focus,
@@ -106,7 +102,12 @@ ul {
 .custom__container {
   width: 90%;
   margin: 0 auto;
-  // background-color: #98EECC;
+}
+
+.custom__header {
+  .main__text {
+    text-align: center;
+  }
 }
 
 .row {

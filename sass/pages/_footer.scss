@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: 3rem 0;
-    background-color: var(--secondary);
+    background-color: black;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,8 +18,12 @@
 
         .main__text {
             text-align: center; 
+         
           }
       .main__text span {
             font-weight: bold; 
+        }
+        .footer__copyrights  {
+          color:var(--secondary);
         }
     }

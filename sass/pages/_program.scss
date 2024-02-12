@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
+
         .card {
             .card__head {
                 font-size: 2rem;
@@ -41,7 +42,9 @@
 }
 
 .blue {
-    background: linear-gradient(135deg, #40C9FF, #E81CFF);
+    background: var(--secondary);
+    border: none;
+    // background: var(--primary);
 }
 .yellow {
     background: linear-gradient(135deg, var(--primary), #49c628);
