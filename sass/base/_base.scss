@@ -8,9 +8,18 @@
   --red: #ED1C24;
   --blue: #0C134F;
   --black-gray: #333;
+  --black: #122;
 }
 
 
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #333BFF;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+  
 *,
 ::after,
 ::before {
@@ -18,7 +27,8 @@
   padding: 0;
   box-sizing: border-box;
   text-align: right;
-  font-family: 'Tajawal', sans-serif;
+  // font-family: 'Tajawal', sans-serif; Rubik
+  font-family: 'Rubik', sans-serif; 
 }
 
 a, a:hover {
@@ -51,10 +61,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #070506;
+  background-color: #fff;
 }
 p,h1,h2,h3,h4,h5,h6,span,a {
-    font-family: 'Tajawal', sans-serif;
+  font-family: 'Rubik', sans-serif; 
+    // font-family: 'Tajawal', sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -100,7 +111,7 @@ ul {
   list-style: none !important;
 }
 .custom__container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -125,6 +136,10 @@ ul {
     url('https://vjs.zencdn.net/f/1/vjs.ttf') format('truetype');
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+}
 .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before, .vjs-icon-pause:before {
   content: "\f103";
   font-family: 'VideoJS';

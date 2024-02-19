@@ -50,7 +50,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 const navBar = document.querySelector('.nav');
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 600)
+  if (window.screenY > 600)
     navBar.classList.add("sticky");
   else
     navBar.classList.remove("sticky");

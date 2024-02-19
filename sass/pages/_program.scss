@@ -1,7 +1,7 @@
 .program {
     width: 100%;
     padding: 5rem 0;
-
+    background-color: var(--black);
     &__container {
         padding: 5rem 0;
         width: 100%;
@@ -9,7 +9,9 @@
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
-
+        .main__text, .main__heading {
+           color: var(--white);
+        }
         .card {
             .card__head {
                 font-size: 2rem;
@@ -44,7 +46,6 @@
 .blue {
     background: var(--secondary);
     border: none;
-    // background: var(--primary);
 }
 .yellow {
     background: linear-gradient(135deg, var(--primary), #49c628);

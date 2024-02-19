@@ -1,6 +1,9 @@
 .reviews {
     padding: 10rem 0;
-
+  background-color: var(--black);
+  .main__heading , .main__text {
+    color: var(--white);
+  }
     .swiper {
         width: 100%;
         padding-top: 50px;
