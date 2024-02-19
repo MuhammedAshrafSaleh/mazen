@@ -4,6 +4,9 @@
   color: var(--primary);
   text-align: center;
   font-weight: bold;
+    /// White Theme
+    color: var(--secondary);
+    // text-shadow: 2px 2px #000;
 
   @include responsive(tab) {
     font-size: 6rem;
@@ -20,6 +23,8 @@
   color: var(--white);
   margin-bottom: 1rem;
   text-align: center;
+    /// White Theme
+    color: var(--black);
 }
 
 .head__text {
@@ -27,6 +32,8 @@
   font-weight: 600;
   color: var(--gray);
   text-align: center;
+    /// White Theme
+    color: var(--black);
 }
 
 .main__text {
@@ -37,6 +44,18 @@
   font-style: normal;
   line-height: 40px;
   word-spacing: 0;
+  /// White Theme
+  // color: var(--black);
+  color: rgba(30, 48, 86, 0.8);
+  font-weight: 700;
+
+  @include responsive(tabLand) {
+    font-size: 18px;
+  }
+  
+  @include responsive(tab) {
+    font-size: 16px;
+  }
 }
 
 

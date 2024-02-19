@@ -1,7 +1,8 @@
 
 .locations {
     width: 100%;
-    padding: 5rem 0;
+    padding: 10rem 0;
+    background-color: var(--black);
     &__container {
         width: 100%;
         padding: 2rem;
@@ -36,10 +37,8 @@
             flex-direction: column;
         }
     }
-    .map {
-        height: 500px;
-        width: 100%;
-        position: relative;
+    .main__heading {
+        color: var(--white);
     }
 }
 

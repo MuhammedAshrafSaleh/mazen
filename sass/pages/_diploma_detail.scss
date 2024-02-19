@@ -11,7 +11,13 @@
         align-items: center;
         margin: 10rem 0;
     }
+    .tab {
+        input:checked ~ label .tab__head {
+            background: var(--secondary);
+            color: var(--white);
+        }
+    }
     .tab label .tab__number {
-        background: linear-gradient(135deg, var(--primary), #49c628);
+        background: var(--secondary);
     }
 }

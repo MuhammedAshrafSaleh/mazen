@@ -1,5 +1,6 @@
 .hero {
     width: 100%;
+    position: relative;
     padding: 10rem 0;
     &__body {
         display: flex;
@@ -28,8 +29,9 @@
         font-size: 4rem;
         color: var(--white);
         font-weight: bold;
+        color: var(--black);
         span {
-            color: var(--primary);
+            color: var(--secondary);
         }
         @include responsive(tab) {
             display: flex;
@@ -45,6 +47,12 @@
                 margin-right: 5px;
             }
           }
+          @media screen and (max-width: 1400px) {
+            font-size: 3.5rem;
+        }
+          @media screen and (max-width: 1200px) {
+            font-size: 3rem;
+        }
     }
 
     .main__text {
@@ -84,13 +92,46 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 48%;
         @include responsive(tab) { 
             width: 100%;
             iframe {
                 width: 100%;
             }
+        }
+    }
+    .circle {
+        position: absolute;
+    }
+    .shape1 {
+        position: absolute;
+        z-index: -1;
+        width: 300px;
+        left: 0;
+        bottom: 20%;
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+    .shape2 {
+        position: absolute;
+        z-index: -1;
+        width: 300px;
+        right: -10%;
+        top: 35px;
+        @media screen and (max-width: 1400px) {
+            right: -12%;
+        }
+        @media screen and (max-width: 1200px) {
+            right: -15%;
+        }
+        @media screen and (max-width: 1000px) {
+            right: -12%;
+            width: 200px;
+        }
+        @include responsive(tab) {
+            display: none;
         }
     }
 }

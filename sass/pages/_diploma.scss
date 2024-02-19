@@ -1,10 +1,8 @@
 .diploma {
     width: 100%;
     padding-top: 10rem;
-
     .main__heading {
         text-align: center;
-        
         @include responsive(phone) {
             font-size: 8rem;
         }
@@ -14,7 +12,7 @@
         padding-top: 10rem;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch;
         @include responsive(tab) { 
             flex-direction: column !important;
         }
@@ -47,11 +45,11 @@
     }
 
     .secondary__head {
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: start;
-        @include responsive(phone) {
+        margin: 1rem 0;
+        @include responsive(tabLand) {
             font-size: 3rem;
-            margin: 1rem 0;
         }
     }
     
@@ -64,8 +62,15 @@
     &__item {
         font-size: 2rem;
         margin: 1rem 0;
-        color: #ccc;
+        // color: #ccc;
+        color: rgba(30, 48, 86, 0.8);
         font-weight: 700;
+        @media screen and (max-width: 1000px) {
+            font-size: 1.6rem;
+        }
+        @include responsive(tab) {
+            font-size: 2rem;
+        }
     }
     .head__number {
         width: 8rem;
