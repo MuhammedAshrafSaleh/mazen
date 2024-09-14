@@ -62,13 +62,18 @@ window.addEventListener('load', function () {
   // Get the overlay element
   var overlay = document.querySelector('.loader-wrapper');
 
+  // Set a maximum fade-out duration of 5 seconds
+  var fadeDuration = 5000; // 5 seconds in milliseconds
+  var fadeStep = 0.1;      // Step to reduce opacity
+  var fadeInterval = fadeDuration / (1 / fadeStep); // Calculate time between opacity changes
+
   // Fade out the overlay
   overlay.style.opacity = 1;
   (function fade() {
-    if ((overlay.style.opacity -= 0.1) < 0) {
+    if ((overlay.style.opacity -= fadeStep) <= 0) {
       overlay.style.display = 'none';
     } else {
-      requestAnimationFrame(fade);
+      setTimeout(fade, fadeInterval); // Fade with a calculated interval
     }
   })();
 });
