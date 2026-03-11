@@ -7,16 +7,36 @@
   <title>Digital Marketing Diploma</title>
   <meta name="description"
     content="اكتسب مهارات التسويق الرقمي الحديثة مع مازن السيسي. دبلومة شاملة تغطي إعلانات فيسبوك، جوجل، انستجرام، سناب شات وتيك توك. انضم الآن!" />
+
+  <!-- Only 2 preconnects for Google Fonts (most critical) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- dns-prefetch for the rest -->
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://use.fontawesome.com">
+
+  <!-- Critical CSS — load normally -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="css/app.css" />
+
+  <!-- Non-critical CSS — load async -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for JS-disabled browsers -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  </noscript>
+
   <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
 </head>
 
